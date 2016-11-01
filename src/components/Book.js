@@ -16,7 +16,10 @@ export default class Book extends React.Component {
         {books.map(b => {
           return <div className="panel panel-primary">
             <div className="panel-heading"><h3 className="panel-title">{b.title}</h3></div>
-            <div className="panel-body"><Author {... b.author} /></div>
+            <div className="panel-body">
+              <Author {... b.author} />
+              <div>Rating: {this.state.rating}</div>              
+            </div>
           </div>
         })}
         </div>
